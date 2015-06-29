@@ -15,12 +15,12 @@
 SHELL=/bin/sh
 
 # To assist in cross-compiling
-CC=gcc
-AR=ar
-RANLIB=ranlib
-LDFLAGS=
+CC=arm-uclinux-elf-gcc
+AR=arm-uclinux-elf-ar
+RANLIB=arm-uclinux-elf-ranlib
+LDFLAGS=-elf2flt
 
-BIGFILES=-D_FILE_OFFSET_BITS=64
+BIGFILES=-D_FILE_OFFSET_BITS=32
 CFLAGS=-Wall -Winline -O2 -g $(BIGFILES)
 
 # Where you want it installed when you do 'make install'
